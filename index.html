@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Ana María Developer</title>
+    <meta name="description" content="Portafolio de Ana María — desarrolladora de software, APIs, chatbots y soluciones tecnológicas.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav>
+            <h1>Ana María Developer</h1>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== PRESENTACIÓN ===== -->
+    <section class="presentacion">
+        <img src="imagenes/me.jpg" alt="Foto de Ana María" class="foto-perfil">
+        <div>
+            <h2>Hola, soy Ana María</h2>
+            <p>Desarrolladora de software especializada en soluciones tecnológicas personalizadas, APIs, chatbots y sistemas CRUD.</p>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <main>
+        <section id="sobre-mi" class="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Soy programadora apasionada por crear soluciones prácticas que ayuden a negocios a optimizar sus procesos. Manejo tecnologías como Python, Django, HTML, CSS, JavaScript, MySQL y APIs.</p>
+            <h3>Habilidades Técnicas</h3>
+            <ul>
+                <li>Python, Django, Flask</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>MySQL, PostgreSQL</li>
+                <li>Integración de APIs y Chatbots</li>
+            </ul>
+        </section>
+
+        <!-- ===== PROYECTOS ===== -->
+        <section id="proyectos" class="proyectos">
+            <h2>Proyectos</h2>
+
+            <div class="proyecto">
+                <img src="imagenes/purafruta_inicio.png" alt="CRUD Pura Fruta" loading="lazy">
+                <h3>CRUD en Python - Pura Fruta</h3>
+                <p>Sistema de gestión de productos e inventario para empresa de jugos naturales.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+            </div>
+
+            <div class="proyecto">
+                <img src="imagenes/corefit.jpg" alt="Software Gimnasio" loading="lazy">
+                <h3>Software para Gimnasio</h3>
+                <p>Aplicación para registrar clientes, gestionar membresías y controlar pagos.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+            </div>
+
+            <div class="proyecto">
+                <img src="imagenes/apirest.jpg" alt="API Django" loading="lazy">
+                <h3>API Funcional en Django</h3>
+                <p>API REST para integración de datos entre plataformas de forma segura.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+            </div>
+        </section>
+
+        <!-- ===== SERVICIOS ===== -->
+        <section id="servicios" class="servicios">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Desarrollo de software a medida</li>
+                <li>Creación de chatbots para negocios</li>
+                <li>Integración de APIs y automatizaciones</li>
+                <li>Desarrollo web full stack</li>
+            </ul>
+        </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/mpwlnrpa" method="POST">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Tu correo" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2025 Ana María Developer | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

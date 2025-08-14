@@ -1,0 +1,243 @@
+/* ===== FUENTES Y RESET ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f9f9f9, #e9f0f7);
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: rgba(13, 27, 42, 0.95);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header nav h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+header nav h1:hover {
+    transform: scale(1.05);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* ===== PRESENTACIÓN ===== */
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+    background: white;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.foto-perfil {
+    width: 160px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+}
+
+/* ===== TÍTULOS ===== */
+h2 {
+    margin-bottom: 1rem;
+    color: #0d1b2a;
+    font-weight: 700;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #ff6600;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+/* ===== PROYECTOS ===== */
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.proyecto {
+    background: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.proyecto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.proyecto a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.proyecto a:hover {
+    color: #cc5200;
+}
+
+.proyecto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== SERVICIOS ===== */
+.servicios ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.servicios li {
+    background: rgba(255,255,255,0.85);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicios li:hover {
+    transform: scale(1.02);
+}
+
+/* ===== CONTACTO ===== */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.9);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    gap: 10px;
+}
+
+.contacto label {
+    font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border 0.3s ease;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    border: 1px solid #ff6600;
+    outline: none;
+}
+
+.contacto button {
+    background: linear-gradient(to right, #ff6600, #ff8800);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.contacto button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
